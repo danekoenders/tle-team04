@@ -4,9 +4,6 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <!-- CSRF Token -->
-    <meta name="csrf-token" content="{{ csrf_token() }}">
-
     <title>TLE-01</title>
 
     <!-- Fonts -->
@@ -26,14 +23,14 @@
     <!-- Scripts -->
 
 </head>
-<body>
+<body style="background-color: white">
 
 <div class="wrapper">
     <div class="sidebar">
         <h2>Logo</h2>
         <div class="ul-container">
             <ul>
-                <li class="vert-li fontsize-one"><a class="flex" href="#"><i class="bi bi-person-square rightpad"></i>Profiel</a>
+                <li class="vert-li fontsize-one"><a class="flex" href="profile.html"><i class="bi bi-person-square rightpad"></i>Profiel</a>
                 </li>
                 <li class="vert-li fontsize-one"><a class="flex" href="#"><i
                         class="bi bi-upc-scan rightpad"></i>Scan</a>
@@ -53,8 +50,27 @@
             </ul>
         </div>
     </div>
+
 </div>
 
+<main style="margin-left: 200px;">
+    <section class="clip">
+        <div class="profile-container ">
+            <div class="subject-div">Uw Profiel</div>
+            <div class="profile-picture">
+                    <img src="../images/pf.png" alt="profile picture">
+                    <h2>Mike Degrassi</h2>
+                <div class="profile-info">
+                    <ul style="margin-top: 8px">
+                        <li class="vert-li fontsize-one"><p class="flex"><i class="bi bi-envelope-at rightpad"></i>1006780@hr.nl</p>
+                        <li class="vert-li fontsize-one"><p class="flex"><i class="bi bi-list-check rightpad"></i>8 project(en)</p>
+                    </ul>
+                </div>
+                <button type="button" class="btn btn-danger">Verwijder profiel</button>
+            </div>
+        </div>
+    </section>
+</main>
 
 </body>
 </html>
