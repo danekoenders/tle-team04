@@ -393,7 +393,7 @@ td {
 }
 
 .button-box {
-    padding-top: 100px;
+    padding-top: 50px;
     justify-content: center;
     display: flex;
     height: 100px;
@@ -407,6 +407,52 @@ td {
     width: 140px;
     height: 50px;
     border-radius: 5px;
+    margin: 20px;
+}
+
+.help-button {
+    justify-content: right;
+    display: flex;
+    height: 50px;
+    align-items: center;
+}
+
+.btn {
+    background-color: #2b50ec; /* Blue background */
+    border: none; /* Remove borders */
+    color: white; /* White text */
+    padding: 6px 12px; /* Some padding */
+    font-size: 32px; /* Set a font size */
+    cursor: pointer; /* Mouse pointer on hover */
+}
+
+/* Darker background on mouse-over */
+.btn:hover {
+    background-color: RoyalBlue;
+}
+
+.form-box {
+    padding-top: 50px;
+    justify-content: center;
+    align-items: center;
+}
+
+hr {
+    color: #33383b;
+}
+
+input[type=text] {
+    display: inline-block;
+    width: 100%;
+    padding: 10px;
+}
+
+.flex-container {
+    padding: 50px;
+    justify-content: center;
+    display: flex;
+    height: 50px;
+    align-items: center;
 }
 
 /* Media Queries */
