@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="e087ed0a-ddf4-46e0-a21b-6d83a67de50e" name="Changes" comment="Profiel, login en register pagina's layout" />
+    <list default="true" id="e087ed0a-ddf4-46e0-a21b-6d83a67de50e" name="Changes" comment="index login profile register toegevoegd." />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -53,8 +53,8 @@
 }</component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\xampp\htdocs\tle01-project\images" />
       <recent name="C:\xampp\htdocs\tle01-project\templates" />
+      <recent name="C:\xampp\htdocs\tle01-project\images" />
     </key>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
@@ -91,7 +91,14 @@
       <option name="project" value="LOCAL" />
       <updated>1673017011720</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="index login profile register toegevoegd.">
+      <created>1673218953354</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1673218953354</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -124,6 +131,7 @@
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <MESSAGE value="Homepagina, Verticale en horizontale navigatie" />
     <MESSAGE value="Profiel, login en register pagina's layout" />
-    <option name="LAST_COMMIT_MESSAGE" value="Profiel, login en register pagina's layout" />
+    <MESSAGE value="index login profile register toegevoegd." />
+    <option name="LAST_COMMIT_MESSAGE" value="index login profile register toegevoegd." />
   </component>
 </project>
