@@ -1,20 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="e087ed0a-ddf4-46e0-a21b-6d83a67de50e" name="Changes" comment="...">
-      <change afterPath="$PROJECT_DIR$/images/pf.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/images/top-foto-tle01.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/feedback.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/logout.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/projecten.html" afterDir="false" />
+    <list default="true" id="e087ed0a-ddf4-46e0-a21b-6d83a67de50e" name="Changes" comment="Feedback, loguit, projecten lijst pagina's en scrollable div's toegevoegd.">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/static/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/static/css/style.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/login.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/probleem details.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/probleem details.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/profile.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/profile.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/register.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/register.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/scan.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/scan.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/website problemen.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/website problemen.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -119,7 +109,14 @@
       <option name="project" value="LOCAL" />
       <updated>1673219131484</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="Feedback, loguit, projecten lijst pagina's en scrollable div's toegevoegd.">
+      <created>1673232891224</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1673232891224</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -154,6 +151,7 @@
     <MESSAGE value="Profiel, login en register pagina's layout" />
     <MESSAGE value="index login profile register toegevoegd." />
     <MESSAGE value="..." />
-    <option name="LAST_COMMIT_MESSAGE" value="..." />
+    <MESSAGE value="Feedback, loguit, projecten lijst pagina's en scrollable div's toegevoegd." />
+    <option name="LAST_COMMIT_MESSAGE" value="Feedback, loguit, projecten lijst pagina's en scrollable div's toegevoegd." />
   </component>
 </project>
