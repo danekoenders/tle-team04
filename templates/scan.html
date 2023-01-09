@@ -37,17 +37,17 @@
                 <li class="vert-li fontsize-one"><a class="flex" href="#"><i
                         class="bi bi-upc-scan rightpad"></i>Scan</a>
                 </li>
-                <li class="vert-li fontsize-one"><a class="flex" href="#"><i class="bi bi-list-task rightpad"></i>Lijst</a>
+                <li class="vert-li fontsize-one"><a class="flex" href="projecten.html"><i class="bi bi-list-task rightpad"></i>Lijst</a>
                 </li>
             </ul>
 
             <ul>
-                <li class="vert-li fontsize-one"><a class="flex" href="#"><i class="bi bi-chat-right-dots rightpad"></i>Feedback</a>
+                <li class="vert-li fontsize-one"><a class="flex" href="feedback.html"><i class="bi bi-chat-right-dots rightpad"></i>Feedback</a>
                 <li class="vert-li fontsize-one"><a class="flex" href="#"><i class="bi bi-question-square rightpad"></i>Hulp</a>
                 </li>
                 <li class="vert-li fontsize-one"><a class="flex" href="#"><i class="bi bi-info-square rightpad"></i>Over
                     Ons</a></li>
-                <li class="vert-li fontsize-one"><a class="flex" href="#"><i class="bi bi-box-arrow-left rightpad"></i>Log
+                <li class="vert-li fontsize-one"><a class="flex" href="logout.html"><i class="bi bi-box-arrow-left rightpad"></i>Log
                     uit</a></li>
             </ul>
         </div>
@@ -57,24 +57,36 @@
 <main style="margin-left: 200px;">
     <section class="clip">
         <div class="detail-container">
-            <div class="subject-div">Scan Website</div>
+            <div class="subject-container">
+                <div class="subject-div">Scan Website</div>
+                <div class="back-button"><a href="profile.html"><i class="bi bi-arrow-left-square back-icon fontsize-two white-text"></i></a></div>
+            </div>
             <div class="detail-box">
-               <div class="help-button">
-                   <button class="btn"><i class="bi bi-question-circle"></i></button>
-               </div>
+                <div class="help-button">
+                    <button class="btn btn-primary btn-block mb-4 fontsize-one"><i class="bi bi-question-square"></i>
+                    </button>
+                </div>
                 <form>
                     <div class="form-box">
 
-                        <label for="url"><h3><b>Url</b></h3></label>
-                        <input type="text" placeholder="Enter URL" name="url" id="url" required>
+                        <label for="url"><h3><b>URL</b></h3></label>
+                        <input class="scan-input" type="text" placeholder="Enter URL" name="url" id="url" required>
 
                         <hr>
-                        <div class="button-box">
-                        <button type="submit" class="scan-button"><b>Scan</b></button>
-                        </div>
-                        <div class="flex-container">
-                            <button type="submit" class="scan-button"><b>Scan Opnieuw</b></button>
-                            <button type="submit" class="scan-button"><b>Sla op</b></button>
+                        <div class="button-container">
+                            <div class="button-box">
+                                <button type="submit" class="btn btn-primary btn-block mb-4 width-30 fontsize-one">
+                                    Scan
+                                </button>
+                            </div>
+                            <div class="flex-container">
+                                <button type="submit" class="btn btn-primary btn-block mb-4 width-30 fontsize-one">
+                                    Scan Opnieuw
+                                </button>
+                                <button type="submit" class="btn btn-primary btn-block mb-4 width-30 fontsize-one">Sla
+                                    op
+                                </button>
+                            </div>
                         </div>
                     </div>
                 </form>
