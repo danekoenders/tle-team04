@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Nanum+Gothic&display=swap');
 
 body {
-    background-color: #0e1111;
+    background-color: dimgrey;
     font-family: 'Nanum+Gothic', sans-serif;
     color: white;
 }
@@ -202,7 +202,6 @@ a {
 }
 
 .wrapper .sidebar ul li {
-    padding: 15px;
     border-bottom: 1px solid #bdb8d7;
     border-bottom: 1px solid rgba(0, 0, 0, 0.05);
     border-top: 1px solid rgba(255, 255, 255, 0.05);
@@ -211,6 +210,8 @@ a {
 .wrapper .sidebar ul li a {
     color: white;
     display: block;
+    width: 100%;
+    padding: 15px;
 }
 
 .wrapper .sidebar ul li a .fas {
@@ -381,14 +382,12 @@ a {
     max-width: 10%;
 }
 
-.clip {
-    height: 100vh;
+#clip {
 
-    /*background-color: rgb(43, 80, 236);*/
+    background-color: rgb(43, 80, 236);
+    clip-path: polygon(0 0, 100% 0, 100% 60%, 50% 70%, 0 60%);
+    /*background-color: cornflowerblue;*/
 
-    background-color: cornflowerblue;
-
-    /*clip-path: polygon(0 0, 100% 0, 100% 60%, 50% 70%, 0 60%);*/
 }
 
 .clip-red {

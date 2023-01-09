@@ -1,8 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="e087ed0a-ddf4-46e0-a21b-6d83a67de50e" name="Changes" comment="Verbeterd">
+    <list default="true" id="e087ed0a-ddf4-46e0-a21b-6d83a67de50e" name="Changes" comment="Kleine verbeteringen">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/static/css/style.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/website problemen.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/website problemen.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -121,7 +123,14 @@
       <option name="project" value="LOCAL" />
       <updated>1673267425859</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="Kleine verbeteringen">
+      <created>1673268743447</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1673268743447</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -158,6 +167,7 @@
     <MESSAGE value="..." />
     <MESSAGE value="Feedback, loguit, projecten lijst pagina's en scrollable div's toegevoegd." />
     <MESSAGE value="Verbeterd" />
-    <option name="LAST_COMMIT_MESSAGE" value="Verbeterd" />
+    <MESSAGE value="Kleine verbeteringen" />
+    <option name="LAST_COMMIT_MESSAGE" value="Kleine verbeteringen" />
   </component>
 </project>
