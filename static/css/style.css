@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Nanum+Gothic&display=swap');
 
 body {
-    background-color: dimgrey;
+    background-color: cornflowerblue;
     font-family: 'Nanum+Gothic', sans-serif;
     color: white;
 }
@@ -382,11 +382,11 @@ a {
     max-width: 10%;
 }
 
-#clip {
+.clip {
 
-    background-color: rgb(43, 80, 236);
-    clip-path: polygon(0 0, 100% 0, 100% 60%, 50% 70%, 0 60%);
-    /*background-color: cornflowerblue;*/
+    /*background-color: rgb(43, 80, 236);*/
+    /*clip-path: polygon(0 0, 100% 0, 100% 60%, 50% 70%, 0 60%);*/
+    background-color: cornflowerblue;
 
 }
 
@@ -406,8 +406,7 @@ a {
 }
 
 .message-field {
-    padding: 0;
-    padding-bottom: 10vh;
+    padding: 0 0 10vh;
 }
 
 .white-text {
