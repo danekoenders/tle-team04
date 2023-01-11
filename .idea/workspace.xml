@@ -1,20 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="e087ed0a-ddf4-46e0-a21b-6d83a67de50e" name="Changes" comment="Verbeteringen in styling van scrollbar">
-      <change afterPath="$PROJECT_DIR$/images/tle-background.PNG" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/feedback.php" afterDir="false" />
+    <list default="true" id="e087ed0a-ddf4-46e0-a21b-6d83a67de50e" name="Changes" comment="Eindelijk de achtergrond zoals we hem wilden.">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/static/css/style.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/feedback.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/feedback.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/login.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/logout.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/logout.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/probleem details.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/probleem details.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/profile.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/profile.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/projecten.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/projecten.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/register.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/register.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/scan.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/scan.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/website problemen.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/website problemen.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -175,7 +166,14 @@
       <option name="project" value="LOCAL" />
       <updated>1673412524587</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="Eindelijk de achtergrond zoals we hem wilden.">
+      <created>1673445816407</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1673445816407</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -217,6 +215,7 @@
     <MESSAGE value="Zoeken in projecten toegevoegd" />
     <MESSAGE value="Log uit pop up ipv heel scherm." />
     <MESSAGE value="Verbeteringen in styling van scrollbar" />
-    <option name="LAST_COMMIT_MESSAGE" value="Verbeteringen in styling van scrollbar" />
+    <MESSAGE value="Eindelijk de achtergrond zoals we hem wilden." />
+    <option name="LAST_COMMIT_MESSAGE" value="Eindelijk de achtergrond zoals we hem wilden." />
   </component>
 </project>
