@@ -71,9 +71,24 @@
                             <td><b>Number of errors</b></td>
                         </tr>
                         </thead>
-                        <tbody>
+                        <tbody id="myProjects">
                         <tr>
-                            <td>*websitenaam*</td>
+                            <td>youtube</td>
+                            <td>
+                                <form action="">
+                                    <button type="submit" class="btn btn-primary">Details</button>
+                                </form>
+                            </td>
+                            <td>21</td>
+                            <td>
+                                <form action="">
+                                    <button class="btn btn-danger"><i class="bi bi-trash3"></i></button>
+                                </form>
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td>anders</td>
                             <td>
                                 <form action="">
                                     <button type="submit" class="btn btn-primary">Details</button>
@@ -89,6 +104,12 @@
                         </tbody>
                     </table>
                 </div>
+                <div class="input-group rounded center-content">
+                    <input type="search" class="form-control rounded search-input" id="myInput" onkeyup="searchProject()" placeholder="Search for projects.." aria-label="Search" aria-describedby="search-addon" />
+                    <span class="input-group-text border-0" id="search-addon" style="background-color: #33383b">
+    <i class="bi bi-search white-text"></i>
+  </span>
+                </div>
             </div>
         </div>
     </section>
@@ -96,3 +117,25 @@
 
 </body>
 </html>
+
+<script>
+    function searchProject() {
+        // Declare variables
+        let input, tbody, tr, td, filter,  txtValue;
+        input = document.getElementById('myInput');
+        filter = input.value.toUpperCase();
+        tbody = document.getElementById("myProjects");
+        tr = tbody.getElementsByTagName('tr');
+
+        // Loop through all list items, and hide those who don't match the search query
+        for (let i = 0; i < tr.length; i++) {
+            td = tr[i].getElementsByTagName("td")[0];
+            txtValue = td.textContent || td.innerText;
+            if (txtValue.toUpperCase().indexOf(filter) > -1) {
+                tr[i].style.display = "";
+            } else {
+                tr[i].style.display = "none";
+            }
+        }
+    }
+</script>

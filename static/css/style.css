@@ -56,7 +56,17 @@ body {
 }
 
 .fontsize-three {
-    font-size: 1.5vw;
+    font-size: 1.3rem;
+}
+
+.search-input {
+    display: flex;
+    max-width: 30%;
+}
+
+.center-content {
+    display: flex;
+    justify-content: center;
 }
 
 .verplichting-text {
