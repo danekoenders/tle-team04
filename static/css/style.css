@@ -1,7 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Nanum+Gothic&display=swap');
 
 body {
-    background-color: cornflowerblue;
     font-family: 'Nanum+Gothic', sans-serif;
     color: white;
 }
@@ -436,9 +435,7 @@ a {
 
 .clip {
 
-    /*background-color: rgb(43, 80, 236);*/
-    /*clip-path: polygon(0 0, 100% 0, 100% 60%, 50% 70%, 0 60%);*/
-    background-color: cornflowerblue;
+    background-image: url("/images/pf.png");
 
 }
 
@@ -455,6 +452,12 @@ a {
 .button-container {
     display: flex;
     flex-direction: column;
+}
+
+.bg {
+    background-image: url("../../images/tle-background.PNG") ;
+    background-size: cover;
+    background-repeat: no-repeat;
 }
 
 .message-field {

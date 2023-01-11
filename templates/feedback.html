@@ -57,43 +57,44 @@
 </div>
 
 <main style="margin-left: 200px;">
+    <section class="bg">
+        <div class="profile-container">
 
-    <div class="profile-container">
+            <div class="subject-container">
+                <div class="subject-div">Feedback</div>
+                <div class="back-button"><a href="profile.html"><i
+                        class="bi bi-arrow-left-square back-icon fontsize-two white-text"></i></a></div>
+            </div>
 
-        <div class="subject-container">
-            <div class="subject-div">Feedback</div>
-            <div class="back-button"><a href="profile.html"><i
-                    class="bi bi-arrow-left-square back-icon fontsize-two white-text"></i></a></div>
+            <div id="popup" data-visible="false">
+            </div>
+
+            <div class=" profile-picture">
+                <form action="" method="post">
+
+                    <div class="form-outline mb-4">
+                        <label class="form-label" for="name">Your name:</label>
+                        <input type="text" id="name" class="form-control" placeholder="Het persoon zijn/haar naam"/>
+                    </div>
+
+                    <div class="form-outline mb-4">
+                        <label class="form-label" for="email">Your email:</label>
+                        <input type="email" id="email" class="form-control" placeholder="email van dit persoon"/>
+                    </div>
+
+                    <!-- Message input -->
+                    <div class="form-outline mb-4">
+                        <label class="form-label" for="message">Feedback:</label>
+                        <textarea style="padding: 10px 10px 10vh;" maxlength="250" id="message"
+                                  class="form-control message-field" placeholder="Typ uw feedback hier"></textarea>
+                    </div>
+
+                    <!-- Submit button -->
+                    <button type="submit" name="name"  class="btn btn-primary btn-block mb-4 sign-button">Send</button>
+                </form>
+            </div>
         </div>
-
-        <div id="popup" data-visible="false">
-        </div>
-
-        <div class=" profile-picture">
-            <form>
-
-                <div class="form-outline mb-4">
-                    <label class="form-label" for="name">Your name:</label>
-                    <input type="text" id="name" class="form-control" placeholder="Het persoon zijn/haar naam"/>
-                </div>
-
-                <div class="form-outline mb-4">
-                    <label class="form-label" for="email">Your email:</label>
-                    <input type="email" id="email" class="form-control" placeholder="email van dit persoon"/>
-                </div>
-
-                <!-- Message input -->
-                <div class="form-outline mb-4">
-                    <label class="form-label" for="message">Feedback:</label>
-                    <textarea style="padding: 10px 10px 10vh;" maxlength="250" id="message"
-                              class="form-control message-field" placeholder="Typ uw feedback hier"></textarea>
-                </div>
-
-                <!-- Submit button -->
-                <button type="submit" class="btn btn-primary btn-block mb-4 sign-button">Send</button>
-            </form>
-        </div>
-    </div>
+    </section>
 </main>
 </body>
 </html>

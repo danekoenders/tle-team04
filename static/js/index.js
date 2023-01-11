@@ -48,7 +48,6 @@ function buttonClickHandler (e) {
 
         let rejectButton = document.createElement('button');
         rejectButton.innerHTML = 'No';
-        // rejectButton.classList.add('logout-buttons');
         rejectButton.classList.add('btn');
         rejectButton.classList.add('btn-success');
         rejectButton.addEventListener('click', rejectButtonClickHandler)
