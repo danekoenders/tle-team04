@@ -6,6 +6,10 @@ body {
     color: white;
 }
 
+a {
+    cursor: pointer;
+}
+
 .full {
     display: flex;
     justify-content: center;
@@ -105,10 +109,44 @@ body {
     justify-content: space-evenly;
 }
 
-.logout-choose > button {
+.logout-choose > button{
     display: flex;
-    width: 30%;
+    width: 20%;
     justify-content: center;
+}
+
+.logout-form > button {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+}
+
+.popup {
+    display: flex;
+    flex-direction: column;
+
+    position: absolute;
+
+    top: 40%;
+
+    padding-top: 50px;
+    padding-bottom: 50px;
+    border-radius: 10px;
+    align-items: center;
+
+    width: 50%;
+
+    background-color: rgb(43, 80, 236);
+
+    justify-content: center;
+}
+
+.hide {
+    visibility: hidden;
+}
+
+.show {
+    visibility: visible;
 }
 
 .padding-10 {

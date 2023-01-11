@@ -22,6 +22,8 @@
 
     <!-- Scripts -->
 
+    <script type="text/javascript" src="../static/js/index.js" defer></script>
+
 </head>
 <body style="background-color: rgba(255, 0, 0, 0%)">
 
@@ -46,9 +48,8 @@
                 <li class="vert-li fontsize-one"><a class="flex" href="#"><i class="bi bi-chat-right-dots rightpad"></i>Feedback</a>
                 <li class="vert-li fontsize-one"><a class="flex" href="#"><i class="bi bi-question-square rightpad"></i>Help</a>
                 </li>
-                <li class="vert-li fontsize-one"><a class="flex" href="logout.html"><i
-                        class="bi bi-box-arrow-left rightpad"></i>Log
-                    out</a></li>
+                <li class="vert-li fontsize-one" id="logout" data-visible="false"><a><i
+                        class="bi bi-box-arrow-left rightpad"></i>Log out</a></li>
             </ul>
         </div>
     </div>
@@ -56,36 +57,40 @@
 
 <main style="margin-left: 200px;">
     <section id="clip">
-            <div class="detail-container">
-                <div class="subject-container">
-                    <div class="subject-div">*websitenaam* problemen</div>
-                    <div class="back-button"><a href="profile.html"><i
-                            class="bi bi-arrow-left-square back-icon fontsize-two white-text"></i></a></div>
+        <div class="detail-container">
+            <div class="subject-container">
+                <div class="subject-div">*websitenaam* problemen</div>
+                <div class="back-button"><a href="profile.html"><i
+                        class="bi bi-arrow-left-square back-icon fontsize-two white-text"></i></a></div>
+            </div>
+
+            <div id="popup" data-visible="false">
+            </div>
+
+            <div class="detail-box">
+                <div class="scroll-list">
+                    <table>
+                        <thead>
+                        <tr>
+                            <td><b>Problem</b></td>
+                            <td><b>More Information</b></td>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr>
+                            <td>*probleemnaam*</td>
+                            <td>
+                                <button type="submit" class="info-button">info</button>
+                            </td>
+                        </tr>
+                        </tbody>
+                    </table>
                 </div>
-                <div class="detail-box">
-                    <div class="scroll-list">
-                        <table>
-                            <thead>
-                            <tr>
-                                <td><b>Problem</b></td>
-                                <td><b>More Information</b></td>
-                            </tr>
-                            </thead>
-                            <tbody>
-                            <tr>
-                                <td>*probleemnaam*</td>
-                                <td>
-                                    <button type="submit" class="info-button">info</button>
-                                </td>
-                            </tr>
-                            </tbody>
-                        </table>
-                    </div>
-                    <div class="button-box">
-                        <button type="submit" class="btn btn-primary"><b>scan opnieuw</b></button>
-                    </div>
+                <div class="button-box">
+                    <button type="submit" class="btn btn-primary"><b>scan opnieuw</b></button>
                 </div>
             </div>
+        </div>
     </section>
 </main>
 

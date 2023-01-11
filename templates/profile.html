@@ -19,11 +19,14 @@
 
     <link rel="stylesheet" href="../static/css/style.css">
 
+    <script type="text/javascript" src="../static/js/index.js" defer></script>
+
 
     <!-- Scripts -->
 
 </head>
 <body>
+
 <div class="wrapper">
     <div class="sidebar">
         <h2>Logo</h2>
@@ -45,7 +48,7 @@
                         class="bi bi-chat-right-dots rightpad"></i>Feedback</a>
                 <li class="vert-li fontsize-one"><a class="flex" href="#"><i class="bi bi-question-square rightpad"></i>Help</a>
                 </li>
-                <li class="vert-li fontsize-one"><a class="flex" href="logout.html"><i
+                <li class="vert-li fontsize-one" id="logout" data-visible="false"><a><i
                         class="bi bi-box-arrow-left rightpad"></i>Log out</a></li>
             </ul>
         </div>
@@ -62,6 +65,10 @@
                     <div class="back-button"><a href="profile.html"><i
                             class="bi bi-arrow-left-square back-icon fontsize-two white-text"></i></a></div>
                 </div>
+
+                    <div id="popup" data-visible="false">
+                    </div>
+
                 <div class="profile-picture">
                     <img src="../images/pf.png" alt="profile picture">
                     <h2>Mike Degrassi</h2>

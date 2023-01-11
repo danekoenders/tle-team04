@@ -19,6 +19,7 @@
 
     <link rel="stylesheet" href="../static/css/style.css">
 
+    <script type="text/javascript" src="../static/js/index.js" defer></script>
 
     <!-- Scripts -->
 
@@ -36,7 +37,8 @@
                 <li class="vert-li fontsize-one"><a class="flex" href="scan.html"><i
                         class="bi bi-upc-scan rightpad"></i>Scan</a>
                 </li>
-                <li class="vert-li fontsize-one"><a class="flex" href="projecten.html"><i class="bi bi-list-task rightpad"></i>Projects</a>
+                <li class="vert-li fontsize-one"><a class="flex" href="projecten.html"><i
+                        class="bi bi-list-task rightpad"></i>Projects</a>
                 </li>
             </ul>
 
@@ -46,9 +48,8 @@
                 <li class="vert-li fontsize-one"><a class="flex" href="#"><i
                         class="bi bi-question-square rightpad"></i>Help</a>
                 </li>
-                <li class="vert-li fontsize-one"><a class="flex" href="logout.html"><i
-                        class="bi bi-box-arrow-left rightpad"></i>Log
-                    out</a></li>
+                <li class="vert-li fontsize-one" id="logout" data-visible="false"><a><i
+                        class="bi bi-box-arrow-left rightpad"></i>Log out</a></li>
             </ul>
         </div>
     </div>
@@ -63,6 +64,9 @@
             <div class="subject-div">Feedback</div>
             <div class="back-button"><a href="profile.html"><i
                     class="bi bi-arrow-left-square back-icon fontsize-two white-text"></i></a></div>
+        </div>
+
+        <div id="popup" data-visible="false">
         </div>
 
         <div class=" profile-picture">
@@ -81,7 +85,8 @@
                 <!-- Message input -->
                 <div class="form-outline mb-4">
                     <label class="form-label" for="message">Feedback:</label>
-                    <textarea style="padding: 10px 10px 10vh;" maxlength="250" id="message" class="form-control message-field" placeholder="Typ uw feedback hier"></textarea>
+                    <textarea style="padding: 10px 10px 10vh;" maxlength="250" id="message"
+                              class="form-control message-field" placeholder="Typ uw feedback hier"></textarea>
                 </div>
 
                 <!-- Submit button -->

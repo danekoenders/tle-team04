@@ -22,6 +22,8 @@
 
     <!-- Scripts -->
 
+    <script type="text/javascript" src="../static/js/index.js" defer></script>
+
 </head>
 <body>
 
@@ -45,8 +47,8 @@
                 <li class="vert-li fontsize-one"><a class="flex" href="feedback.html"><i class="bi bi-chat-right-dots rightpad"></i>Feedback</a>
                 <li class="vert-li fontsize-one"><a class="flex" href="#"><i class="bi bi-question-square rightpad"></i>Help</a>
                 </li>
-                <li class="vert-li fontsize-one"><a class="flex" href="logout.html"><i class="bi bi-box-arrow-left rightpad"></i>Log
-                    out</a></li>
+                <li class="vert-li fontsize-one" id="logout" data-visible="false"><a><i
+                        class="bi bi-box-arrow-left rightpad"></i>Log out</a></li>
             </ul>
         </div>
     </div>
@@ -59,6 +61,10 @@
                 <div class="subject-div">Scan Website</div>
                 <div class="back-button"><a href="profile.html"><i class="bi bi-arrow-left-square back-icon fontsize-two white-text"></i></a></div>
             </div>
+
+            <div id="popup" data-visible="false">
+            </div>
+
             <div class="detail-box">
                 <div class="help-button">
                     <button class="btn btn-primary btn-block mb-4 fontsize-one"><i class="bi bi-question-square fontsize-three"></i>
