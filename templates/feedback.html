@@ -70,27 +70,42 @@
             </div>
 
             <div class=" profile-picture">
+
+                <div class="feedbackText">
+                    <h2>Do you have questions or feedback?</h2>
+                    <p style="padding: 5px; font-size: larger">Then do not hesitate to contact us directly.</p>
+                </div>
+
                 <form action="" method="post">
 
-                    <div class="form-outline mb-4">
-                        <label class="form-label" for="name">Your name:</label>
-                        <input type="text" id="name" class="form-control" placeholder="Het persoon zijn/haar naam"/>
-                    </div>
+                    <div class="flex">
+                        <div class="form-outline mb-4 feedbackInput">
+                            <label class="form-label" for="name">Your name</label>
+                            <input type="text" id="name" class="form-control width-90"
+                                   placeholder="Het persoon zijn/haar naam"/>
+                        </div>
 
-                    <div class="form-outline mb-4">
-                        <label class="form-label" for="email">Your email:</label>
-                        <input type="email" id="email" class="form-control" placeholder="email van dit persoon"/>
+                        <div class="form-outline mb-4 feedbackInput">
+                            <label class="form-label" for="email">Your email</label>
+                            <input type="email" id="email" class="form-control width-90" placeholder="email van dit persoon"/>
+                        </div>
+
+
+                        <div class="form-outline mb-4 feedbackInput">
+                            <label class="form-label" for="subject">Subject</label>
+                            <input type="text" id="subject" class="form-control width-90" placeholder="Typ in the subject"/>
+                        </div>
                     </div>
 
                     <!-- Message input -->
-                    <div class="form-outline mb-4">
-                        <label class="form-label" for="message">Feedback:</label>
+                    <div class="form-outline mb-4 feedbackInput">
+                        <label class="form-label" for="message">Feedback</label>
                         <textarea style="padding: 10px 10px 10vh;" maxlength="250" id="message"
-                                  class="form-control message-field" placeholder="Typ uw feedback hier"></textarea>
+                                  class="form-control message-field" placeholder="Typ in your feedback"></textarea>
                     </div>
 
                     <!-- Submit button -->
-                    <button type="submit" name="name"  class="btn btn-primary btn-block mb-4 sign-button">Send</button>
+                    <button type="submit" name="name" class="btn btn-primary btn-block mb-4 sign-button">Send</button>
                 </form>
             </div>
         </div>

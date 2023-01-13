@@ -23,11 +23,14 @@
     <!-- Scripts -->
 
 </head>
-<body class="bg">
+<body class="bg" style="max-width: 50%; margin: auto;">
 
 <div style="margin-top: 50px ;display: flex; justify-content: center"><h1>Logo</h1></div>
 
-<main  style="background-color: #33383b; border-radius: 15px;padding: 20px; margin-top: 100px; max-width: 50%; margin: auto">
+<div class="back-button-log-reg"><a href="index.html"><i
+        class="bi bi-arrow-left-square back-icon fontsize-two white-text    "></i></a></div>
+
+<main style="background-color: #33383b; border-radius: 15px;padding: 20px; margin-top: 100px">
 
 
     <ul class="nav nav-pills nav-justified mb-3" id="ex1" role="tablist">
@@ -47,33 +50,36 @@
         <div class="tab-pane fade show active" id="pills-login" role="tabpanel" aria-labelledby="tab-login">
             <form>
 
-                <div class="form-outline mb-4">
-                    <input type="text" id="registerName" class="form-control"/>
-                    <label class="form-label" for="registerName">Name</label>
-                </div>
+                    <div class="form-outline mb-4">
+                        <input type="text" id="registerName" class="form-control"/>
+                        <label class="form-label" for="registerName">Name</label>
+                    </div>
 
-                <!-- Username input -->
-                <div class="form-outline mb-4">
-                    <input type="text" id="registerUsername" class="form-control"/>
-                    <label class="form-label" for="registerUsername">Username</label>
-                </div>
+                    <!-- Username input -->
+                    <div class="form-outline mb-4">
+                        <input type="text" id="registerUsername" class="form-control"/>
+                        <label class="form-label" for="registerUsername">Username</label>
+                    </div>
 
-                <!-- Email input -->
-                <div class="form-outline mb-4">
-                    <input type="email" id="registerEmail" class="form-control"/>
-                    <label class="form-label" for="registerEmail">Email</label>
-                </div>
+                    <!-- Email input -->
+                    <div class="form-outline mb-4">
+                        <input type="email" id="registerEmail" class="form-control"/>
+                        <label class="form-label" for="registerEmail">Email</label>
+                    </div>
 
-                <!-- Password input -->
-                <div class="form-outline mb-4">
-                    <input type="password" id="registerPassword" class="form-control"/>
-                    <label class="form-label" for="registerPassword">Password</label>
-                </div>
 
-                <!-- Repeat Password input -->
-                <div class="form-outline mb-4">
-                    <input type="password" id="registerRepeatPassword" class="form-control"/>
-                    <label class="form-label" for="registerRepeatPassword">Repeat password</label>
+                <div class="flex" style="justify-content: space-between;">
+                    <!-- Password input -->
+                    <div class="form-outline mb-4 width-45">
+                        <input type="password" id="registerPassword" class="form-control"/>
+                        <label class="form-label" for="registerPassword">Password</label>
+                    </div>
+
+                    <!-- Repeat Password input -->
+                    <div class="form-outline mb-4 width-45">
+                        <input type="password" id="registerRepeatPassword" class="form-control"/>
+                        <label class="form-label" for="registerRepeatPassword">Repeat password</label>
+                    </div>
                 </div>
 
                 <!-- Checkbox -->
