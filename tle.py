@@ -433,28 +433,6 @@ def test():
 @app.route("/test_login")
 def test1():
     return render_template("register_new.html")
-    # users.update_many({}, {"$unset": {"issues": ""}})
-    # return redirect("/")
-    
-    # username= session.get("username")
-    # all_sites= sites.find()
-    # for x in all_sites:
-    #     if x["user"]==username:
-    #         print(x["site_name"])
-    # return redirect("/")
-
-
-
-#test
-
-
-
-
-
-
-
-
-
 
 
 if __name__ == '__main__':
