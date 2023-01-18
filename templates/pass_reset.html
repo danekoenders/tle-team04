@@ -1,0 +1,61 @@
+
+{% extends "master.html" %}
+
+{% block content %}
+
+<div class="clip mt-5" style="width: 50%; margin: auto; background-color: rgb(43, 80, 236); margin-left: 30rem;">
+
+<!-- <div style="margin-top: 50px ;display: flex; justify-content: center"><h1>Logo</h1></div> -->
+
+<main style="background-color: #33383b; border-radius: 15px;padding: 20px;">
+    {% if error %}
+
+    <script>
+        Swal.fire({
+    icon: 'error',
+    title: 'Password confirm doesn`t match',
+  
+  
+  })
+</script>
+
+    
+    {% endif %}
+<h3 class="text-center alert alert-info fw-bold">Reset Password</h3>
+
+    <!-- Pills navs -->
+
+    <!-- Pills content -->
+    <div class="tab-content">
+        <div class="tab-pane fade show active" id="pills-login" role="tabpanel" aria-labelledby="tab-login">
+            <form action="/create_new_pass">
+
+             
+              
+
+                <div class="form-outline mb-4">
+                    <input type="password" id="loginName" name="password" class="form-control" required />
+                    <label class="form-label" for="loginName">New Password</label>
+                </div>
+
+                <!-- Password input -->
+                <div class="form-outline mb-4">
+                    <input type="password" name="password_confirm" id="loginPassword" class="form-control" required/>
+                    <label class="form-label" for="loginPassword">Confirm Password</label>
+                </div>
+
+            
+                <input type="hidden" value="{{email}}"  name="email">
+                </div>
+
+                <!-- Submit button -->
+                <button type="submit" class="btn btn-primary btn-block mb-4 sign-button">Send</button>
+
+            
+            </form>
+        </div>
+    </div>
+</main>
+</div>
+
+{% endblock %}
