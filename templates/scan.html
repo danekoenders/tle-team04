@@ -1,98 +1,218 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="utf-8">
-    <meta content="width=device-width, initial-scale=1" name="viewport">
+{% extends "master.html" %}
 
-    <title>TLE-01</title>
+{% block content %}
 
-    <!-- Fonts -->
-    <link href="//fonts.gstatic.com" rel="dns-prefetch">
-    <link href="https://fonts.bunny.net/css?family=Nunito" rel="stylesheet">
-
-
-    <!--Bootstrap-->
-    <link crossorigin="anonymous" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css"
-          integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" rel="stylesheet">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css" rel="stylesheet">
-
-
-    <link href="../static/css/style.css" rel="stylesheet">
-
-
-    <!-- Scripts -->
-
-    <script type="text/javascript" src="../static/js/index.js" defer></script>
-
-</head>
 <body>
 
-<!-- Sidebar -->
-<div class="wrapper">
-    <div class="sidebar">
-        <h2>Logo</h2>
-        <div class="ul-container">
-            <ul>
-                <li class="vert-li fontsize-one"><a class="flex" href="profile.html"><i
-                        class="bi bi-person-square rightpad"></i>Profile</a>
-                </li>
-                <li class="vert-li fontsize-one"><a class="flex" href="scan.html"><i
-                        class="bi bi-upc-scan rightpad"></i>Scan</a>
-                </li>
-                <li class="vert-li fontsize-one"><a class="flex" href="projecten.html"><i
-                        class="bi bi-list-task rightpad"></i>Projects</a>
-                </li>
-            </ul>
 
-            <ul>
-                <li class="vert-li fontsize-one"><a class="flex" href="feedback.html"><i
-                        class="bi bi-chat-right-dots rightpad"></i>Feedback</a>
-                <li class="vert-li fontsize-one"><a class="flex" href="help.html"><i class="bi bi-question-square rightpad"></i>Help</a>
-                </li>
-                <li class="vert-li fontsize-one" id="logout" data-visible="false"><a><i
-                        class="bi bi-box-arrow-left rightpad"></i>Log out</a></li>
-            </ul>
-        </div>
+
+    <!-- </div class=" d-flex justify-content-center ">
+    <div>
+      <img class="img-fluid " id="loading" width="50%" height="%50" src="/static/images/loading.gif" alt="loading image"  >
     </div>
-</div>
+    </div> -->
+    
+   <div style=" height: 700px; margin-left: 15rem; padding-bottom: 100px; background-color: #6495ED;">
 
-<main style="margin-left: 200px;">
-    <section class="bg">
-        <div class="detail-container">
-            <div class="subject-container">
-                <div class="subject-div">Scan Website</div>
-                <div class="back-button"><a href="profile.html"><i
-                        class="bi bi-arrow-left-square back-icon fontsize-two white-text"></i></a></div>
-            </div>
+   
+    <div class="d-flex justify-content-center ">
+      <div class="ps-4 mt-5">
+    
+        <img class="img-fluid " id="loading" width="100%" height="%100" src="/static/images/loading.gif" alt="loading image"  >
+    
+      </div>
+    
+    </div>
+    
+    
+    <div class="hide container mt-5">
+    
+     {% if scan_again %}
+     <div id="url_input" class="hide mt-5">
+      <!-- <label for="exampleInputEmail1" class="form-label">URL</label> -->
+      <input id="get_url" type="text" class="form-control"  value="{{scan_again}}" >
+    </div>
+    
+    {% else %}
+    
+      <div id="url_input" class="hide mt-5">
+        <!-- <label for="exampleInputEmail1" class="form-label">URL</label> -->
+        <input id="get_url" type="text" class="form-control"  placeholder="Enter URL" >
+      </div>
+    {% endif %}
+      
+     
+      <button id="send" type="button" class="hide btn btn-danger mt-5 w-100">SCAN WEBSITE</button>
+    
+    
+      <div id="print_div" class="container d-none  mt-5 mb-5">
+        <button id="print_btn" class="hide btn  float-end "><img src="/static/images/print.png" alt=""></button>
+      </div>
+     
+    
+      <!-- results -->
+      <h1 id="counter" class="hide text-center text-dark mt-5 mb-5 pb-5"></h1>
+     <div class="hide" id="results">
+      
+    
+    
+     </div>
+    
+     <!-- results end -->
+    
+      <!-- <img class="img-fluid" id="loading" width="80%" height="%60" src="/static/images/scan.gif" alt="loading image" style="margin-top: -100px;" >
+    
+    </div> -->
+    
+    
+    
+    <ul>
+    
+    </ul>
+    
+    
+    
+</div> 
+    
+    <script>
+    
+    
+    // $(function() {
+    //   $("#results").find('#print_btn').on('click', function() {
+    //     alert("test")
+    //     $.print("#results");
+    //   });
+    // });
+    
+    
+    
+    $("#print_btn").click(function(){
+      $.print("#results");
+    })
+    
+    function check_url(string) {
+      let url;
+      try {
+        url = new URL(string);
+      } catch (_) {
+        return false;
+      }
+      return url.protocol === "http:" || url.protocol === "https:";
+    }
+    
+    String.prototype.format = function() {
+            var newStr = this, i = 0;
+            while (/%s/.test(newStr))
+                newStr = newStr.replace("%s", arguments[i++])
+        
+            return newStr;
+        }
+    var $loading = $('#loading').hide();
+    $(document)
+      .ajaxStart(function () {
+        $loading.show();
+        $(".hide").hide()
+        // $("#url_input").hide()
+        // $("#counter").hide()
+        // $("button").hide()
+      })
+      .ajaxStop(function () {
+        $loading.hide();
+        $(".hide").show()
+        $("#print_div").removeClass("d-none")
+        // $("#url_input").show()
+        // $("button").show()
+        // $("#counter").show()
+      });
+    
+    
+    
+    
+    
+    
+    $("#send").click(function(){
+    
+      url= $("#get_url").val()
+    
+    
+    
+      if (url.length>0)
+    
+      {
+        if (check_url(url)) {
+          $("#results").empty()
+          new_url= url.replace("https://", "")
+    
+        
+    send_data= {url:url}
+    
+    console.log(send_data)
+    $.post("http://145.24.222.186:8002/scan_website", send_data, function(data){
+      message=""
+      if (data.length==1){
+        message= data.length+" Probleem gevonden"
+      }
+    
+      else if (data.length>1){
+        message= data.length+" Problemen gevonden"
+      }
+      else {
+        message= "Er is geen probleem. Alles is  OK"
+       $(".print_div").hide()
+      }
+      $("#counter").html(message)
+        counter=0
+        console.log(data)
+        data.forEach(result => {
+          counter+=1
+        results= '<div class="card mt-3"><div id="isue_count" class="card-header text-center text-dark fw-bold">Probleem %s</div><div id="issues" class="card-body"></div> <table class="table px-5  w-100" ><tr><td><span class="badge bg-danger">Probleem</span></td><td id="issue">%s</td></tr><tr><td><span  class="badge bg-primary">Oplossing</span></td><td id="solution">%s</td></tr><tr><td><span class="badge bg-info">Hulp URL</span></td><td id="help_url">%s</td></tr><tr><td><span class="badge bg-secondary">HTML Code</span></td><td id="html_code" class="mw-100"><xmp>%s</xmp></td></tr><tr><td><span class="badge bg-success">Samenvatting</span></td><td id="summary">%s</td></tr></table></div>'.format(counter, result.issue, result.help, result.help_url, result.html_code, result.summary)
+        $("#results").append(results)
+        });
+    
+        // print(".results")
+    })
+          
+        }
+    
+     
+        else {
+          Swal.fire({
+      icon: 'error',
+      title: 'Enter a valid URL please',
+    
+    
+    })
+        }
+       
+      }
+    
+    
+      else {
+        Swal.fire({
+      icon: 'error',
+      title: 'Enter a valid URL please',
+    
+      
+    })
+      }
+    
+    
+    
+        
+    
+    
+    
+      
+      
+    })
+        
+    </script>
+    
+    
+    
+    </body>
 
-            <div id="popup" data-visible="false">
-            </div>
 
-            <div class="detail-box">
-                <div class="help-button">
-                    <button class="btn btn-primary btn-block mb-4 fontsize-one"><i
-                            class="bi bi-question-square fontsize-three"></i>
-                    </button>
-                </div>
-                <form>
-                    <div class="form-box">
 
-                        <label for="url"><h3><b>URL</b></h3></label>
-                        <input class="scan-input" type="text" placeholder="Enter URL" name="url" id="url" required>
 
-                        <hr>
-                        <div class="button-box">
-                            <button type="submit" class="btn btn-primary btn-block mb-4 width-30 fontsize-one">
-                                Scan
-                            </button>
-                        </div>
-                    </div>
-                </form>
-            </div>
-        </div>
-
-    </section>
-</main>
-
-</body>
-</html>
+{% endblock %}
