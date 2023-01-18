@@ -23,15 +23,11 @@ app.config["SESSION_PERMANENT"] = False
 app.config["SESSION_TYPE"] = "filesystem"
 Session(app)
 
-
-
-
-
 #mail
 app.config['MAIL_SERVER']='smtp.mailtrap.io'
 app.config['MAIL_PORT'] = 2525
-app.config['MAIL_USERNAME'] = '#########'
-app.config['MAIL_PASSWORD'] = '##########'
+app.config['MAIL_USERNAME'] = 'd8ec82679ae6a5'
+app.config['MAIL_PASSWORD'] = '34a725c5807738'
 app.config['MAIL_USE_TLS'] = False
 app.config['MAIL_USE_SSL'] = False
 mail = Mail(app)
@@ -83,7 +79,7 @@ def scan():
     if session:
         return render_template("scan.html")
     else:
-        return render_template("login.html")
+        return render_template("login_new.html")
 
 
 @app.route("/home")
@@ -132,7 +128,7 @@ def scan_again():
         
         return render_template("scan.html", scan_again= url)
     else:
-        return render_template("login.html")
+        return render_template("login_new.html")
 
 
 @app.route("/feedback")
@@ -148,7 +144,7 @@ def profile():
         print(session.get("projects"))
         return render_template("profile.html")
     else:
-        return render_template("login.html")
+        return render_template("login_new.html")
 
 @app.route("/feedback_form", methods=["POST"])
 def feedback_form():
@@ -164,7 +160,7 @@ def feedback_form():
         #  msg.body = "Hi {}\nFollow the link to reset your password:\n ".format(get_name)
     msg.html= "<h3>Onderwerp: {}</h3><p>{}</p><p>Groeten</p><p>{}</p>".format(subject, message, name)
     mail.send(msg)
-    return render_template("feedback_new.html", feedback_success="success")
+    return render_template("feedback.html", feedback_success="success")
 
 @app.route("/sites")
 def get_sites():
@@ -210,7 +206,7 @@ def login():
 
 @app.route("/register")
 def register():
-    return render_template("register.html")
+    return render_template("register_new.html")
 
 @app.route("/loguit")
 def loguit():
@@ -219,7 +215,7 @@ def loguit():
         session.clear()
         return redirect("/")
     else:
-        return render_template("login.html")
+        return render_template("login_new.html")
 
 
 @app.route("/forgot_password")
@@ -262,7 +258,7 @@ def create_new_pass():
         pass_hash= hash_.hexdigest()
         app.logger.info(pass_hash)
         users.update_one({"email":email}, { "$set": { "password": pass_hash} } )
-        return render_template("login.html")
+        return render_template("login_new.html")
     else:
         return render_template("pass_reset.html", error="error")
         
@@ -302,10 +298,18 @@ def check_login():
             if x["user"]==username:
                 project_counter+=1
         session["projects"]= project_counter
-        return redirect("/")
+        #return redirect("/")
+        return render_template("master.html")
     else:
         return render_template("login_new.html", error="error")
 
+
+@app.route("/help")
+def help():
+    if session:
+        return render_template("help.html")
+    else:
+        return redirect("/")
 
 @app.route("/remove")
 def remove():
@@ -352,7 +356,7 @@ def user_register():
         return render_template("register_new.html", error_username="error")
     else:
         users.insert_one({"name":name, "username":username, "email":email, "password": pass_hash.hexdigest()})
-        return render_template("login.html")
+        return render_template("login_new.html")
 
 
 
@@ -404,35 +408,16 @@ def remove_site():
  
 
 
-@app.route("/delete_sites", methods = ['GET'])
-def delete_site():
-    sites.delete_many({})
-    return redirect("/")
-@app.route("/delete_ip", methods = ['GET'])
-def delete_ip():
-    ip.delete_many({})
-    return redirect("/")
 
 
 
 
-@app.route("/get_feedbacks")
-def get_feedbacks():
-    feeds= []
-    
-    for x in feedbacks.find():
-        feeds.append(x)
-    return  render_template("get_feedbacks.html", data= feeds)
 
-#test
 
-@app.route("/test")
-def test():
-    return render_template("feedback_new.html")
 
-@app.route("/test_login")
-def test1():
-    return render_template("register_new.html")
+
+
+
 
 
 if __name__ == '__main__':
