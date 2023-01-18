@@ -1,0 +1,177 @@
+{% extends "master.html" %}
+
+{% block content %}
+
+<div class="ps-5  pt-5" style="margin-left: 15rem; background-color: #6495ED; height: 700px;">
+    <table class="table">
+<tr>
+    <th>
+        Sites
+    </th>
+    <th>
+        Problemen
+    </th>
+     <th>
+        Last scan
+    </th>
+    <th>
+      Meer info
+  </th>
+  <th>
+    Actie
+</th>
+</tr>
+
+
+
+{% for x in data %}
+
+<tr>
+    <td class="get_details" >
+     {{x.site_name}}
+    </td>
+    <td >
+    {{x.issues_count}}
+       </td>
+      <td >
+    {{x.last_scan}}
+       </td>
+       <td >
+        <img width="30px" id="{{x.site_name}}" class="get_details" src="/static/images/info2.png">
+           </td>
+           <td >
+            <form class="remove_site" action="/remove_site" method="post">
+            <input type="hidden" name="url" value="{{x.site_name}}">
+            <button type="submit" class="btn">
+            <img  width="30px" id="{{x.site_name}}" class="delete_site" src="/static/images/trash.png">
+          </button>
+          </form>
+          
+               </td>
+</tr>
+
+{% endfor %}
+</table>
+</div>
+
+
+
+<!-- The Modal -->
+<div class="modal" id="myModal" style="z-index: 1;">
+  <div class="modal-dialog modal-fullscreen">
+    <div class="modal-content">
+
+      <!-- Modal Header -->
+      <!-- <div class="modal-header">
+        <h4 class="modal-title">Problemen</h4>
+        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+      </div> -->
+
+      <!-- Modal body -->
+      <div class="modal-body">
+       <div id="results">
+
+       </div>
+      </div>
+
+<form action="/scan_again" method="post">
+<input id="scan_again" name="url" type="hidden" value="">
+<button  type="submit" class="scan_again btn btn-primary w-100 mt-5">SCAN AGAIN</button>
+
+</form>
+      <!-- Modal footer -->
+      <div class="modal-footer">
+        <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Close</button>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+
+
+<script>
+ String.prototype.format = function() {
+            var newStr = this, i = 0;
+            while (/%s/.test(newStr))
+                newStr = newStr.replace("%s", arguments[i++])
+        
+            return newStr;
+        }
+$(".get_details").click(function(){
+  $("#results").empty()
+ 
+    // site= $(this).text().trim()
+    site= $(this).attr("id")
+    var url= "/get_issues/"+site
+
+    send_data= {url: site}
+  
+
+    $.post("/get_issues", send_data, function(data){
+
+       counter=0
+      data[0].issue.forEach(issue => {
+        counter+=1
+        results= '<div class="card mt-3"><div id="isue_count" class="card-header text-center text-dark fw-bold">Probleem %s</div><div id="issues" class="card-body"></div> <table class="table  w-100" ><tr><td><span class="badge bg-danger">Probleem</span></td><td id="issue">%s</td></tr><tr><td><span  class="badge bg-primary">Oplossing</span></td><td id="solution">%s</td></tr><tr><td><span class="badge bg-info">Hulp URL</span></td><td id="help_url">%s</td></tr><tr><td><span class="badge bg-secondary">HTML Code</span></td><td id="html_code" class="mw-100"><xmp>%s</xmp></td></tr><tr><td><span class="badge bg-success">Samenvatting</span></td><td id="summary">%s</td></tr></table></div>'.format(counter, issue.issue, issue.help, issue.help_url, issue.html_code, issue.summary)
+        $("#results").append(results)
+      });
+
+      $("#scan_again").attr("value", site)
+      
+    })
+
+    $("#myModal").show()
+
+  
+    
+})
+
+
+$(".btn-danger").click(function(){
+  $("#myModal").hide()
+})
+$(".btn-close").click(function(){
+  $("#myModal").hide()
+})
+
+
+$(".scan_again").click(function(){
+  url= $(this).attr("id")
+
+  url= "/scan_again/"+url.replace("https://", "")
+  // location.href= url
+  // send_data= {url:url} 
+  // $.post("/scan_again", send_data, function(){
+
+  // })
+  location.href= url
+})
+$( ".remove_site" ).submit(function( event ) {
+ event.preventDefault();
+  Swal.fire({
+  title: 'Weet u zeker dat u de site  wilt verwijderen?',
+  showDenyButton: true,
+  confirmButtonText: 'JA',
+  denyButtonText: `NEE`,
+}).then((result) => {
+  /* Read more about isConfirmed, isDenied below */
+  if (result.isConfirmed) {
+    $(this).unbind('submit').submit()
+    
+  } if (result.isDenied) {
+    location.reload();
+  }
+})
+
+});
+
+
+
+
+
+</script>
+
+
+
+{% endblock %}
