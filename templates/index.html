@@ -4,6 +4,8 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
+
+
     <title>Accessibility</title>
 
     <!-- Fonts -->
@@ -17,7 +19,7 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
 
 
-    <link rel="stylesheet" href="../static/css/style.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
 
 
     <!-- Scripts -->
@@ -28,12 +30,13 @@
 
     <nav class="navbar navbar-expand-md navbar-light shadow-sm" style="background-color: #0e1111;">
         <div class="container">
-            <a class="navbar-brand text-light" href="index.html">
-                Accessibility </a>
+            <a class="navbar-brand text-light" href="/">
+                Accessibility
+            </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
                     data-bs-target="#navbarSupportedContent"
                     aria-controls="navbarSupportedContent" aria-expanded="false"
-                    aria-label="{{ __('Toggle navigation') }}">
+                   >
                 <span class="navbar-toggler-icon navbar-dark"></span>
             </button>
 
@@ -47,11 +50,11 @@
                 <ul class="navbar-nav ms-auto">
                     <!-- Authentication Links -->
                     <li class="nav-item">
-                        <a class="nav-link text-light" href="login.html">Login</a>
+                        <a class="nav-link text-light" href="/login">Login</a>
                     </li>
 
                     <li class="nav-item">
-                        <a class="nav-link text-light" href="register.html">Register</a>
+                        <a class="nav-link text-light" href="/register">Register</a>
                     </li>
 
                 </ul>
@@ -59,10 +62,10 @@
         </div>
     </nav>
 
-
+  
     <main class="">
         <section class="top-section">
-            <div class="full" style="background-image: url('../images/top-foto-tle01.jpg');">
+            <div class="full" style="background-image: url('/static/images/top-foto-tle01.jpg');">
 
                 <div class="img-text">
                     <h1>
@@ -93,13 +96,13 @@
 
             <div style="padding: 5px">
                 <p class="img-text2" style="color: white; text-align: center;">
-                    Accessibility contains tools that can help you in programming a website.
+                    Accessibility  contains tools that can help you in programming a website.
                     <br>
                     This will bring you a great advantage in the future.
                 </p>
             </div>
 
-            <div class="tool-container">
+            <div class="tool-container row">
                 <div style="color: white;">
                     <i class="bi bi-upc-scan fontsize-two" style="color: white;"></i>
                     <p style="font-weight: bold">Scanner</p>
@@ -124,14 +127,12 @@
 
             </div>
 
-            <div class="tool-container">
+            <div class="tool-container row">
                 <div style="color: white;">
                     <i class="bi bi-cash-coin fontsize-two" style="color: white;"></i>
                     <p style="font-weight: bold">Save money</p>
-                    <p>Prevent future problems by taking action before the <a
-                            href="https://digitaaltoegankelijk.nl/nieuws/european-accessibility-act-2025/"
-                            style="color: #c9f505"><u>European
-                        Accessibility Act (EAA)</u></a>.
+                    <p>Prevent future problems by taking action now.
+                        From 2025 accessibility is mandatory in your web application.
                         By making it accessible now you don't need to spend money and time in the future</p>
                 </div>
 
@@ -159,22 +160,28 @@
 
     <div class="footer-right">
 
-        <a href="https://github.com/danekoenders/tle-team04"><i class="bi bi-github"></i></a>
+        <!-- <a href="#"><i style="color: white" class="bi bi-facebook"></i></a>
+        <a href="#"><i class="bi bi-twitter"></i></a>
+        <a href="#"><i class="bi bi-linkedin"></i></a> -->
+        <a href="https://github.com" aria-label="link naar Github"  ></a><i class="bi bi-github"></i></a>
+
+        <!-- aria-label="link naar Github" -->
 
     </div>
 
     <div class="footer-left">
 
         <p class="footer-links">
-            <a class="link-1" href="index.html">Home</a>
+            <a class="link-1" href="/">Home</a>
 
-            <a href="register.html">Register</a>
+            <a href="/register">Register</a>
 
-            <a href="login.html">Login</a>
+            <a href="/login">Login</a>
 
+            <a href="/feedback">Contact</a>
         </p>
 
-        <p>Accessibility &copy; 2022-2023</p>
+        <p>Accessibility &copy; 2022</p>
     </div>
 
 </footer>
